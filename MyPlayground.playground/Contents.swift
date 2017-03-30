@@ -12,6 +12,8 @@ for i in array1 {
 }
 print ("\(cnt)")
 
+print(array1.filter{ $0%2 == 0}.count)
+
 
 // #2. 주어진 배열안의 원소들의 모든 곱을 구하시오.
 
@@ -22,6 +24,9 @@ for i in array2{
     cnt1 *= i
 }
 print ("\(cnt1)")
+
+print(array2.reduce(1, *))
+
 
 // #3. 주어진 배열에서 소수가 아닌 것을 뽑아 배열로 출력하세요 (배열은 2이상의 숫자만 있답니다)!
 
@@ -55,6 +60,7 @@ for i in 0..<array4.count-1 {
 }
 
 print (array4)
+
 // 5. 주어진 배열에서 각각의 수에 대해 1과 자신을 포함한 약수의 총합을 구하시오.
 
 var array5 = [2,4,6,8,10]
