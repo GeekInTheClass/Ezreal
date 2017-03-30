@@ -76,3 +76,14 @@ for i in 0..<array5.count {
 }
 
 print (sum)
+
+var sum2 = 0
+print(array5.reduce(0){(_, num:Int) -> Int in
+    for i in 1..<num+1 {
+        if(num%i == 0) {
+            sum2 += i
+        }
+    }
+    return sum2
+})
+
