@@ -27,34 +27,16 @@ print ("\(cnt1)")
 
 let array3 = [7,3,5,4,2,10,15]
 
-var arr :[Int] = []
-for i in 0..<array3.count {
-    
-    for j in 2..<array3[i]{
-        if (array3[i] % j == 0){
-            arr.append(array3[i])
-            break
-        }
-    }
-}
-print ("\(arr)")
+print(array3.filter{$0 % 2 == 0}.filter{$0>2} + (array3.filter{$0 % 3 == 0}).filter{$0>3})
 
 
 // 4. 주어진 배열을 정렬하시오.
 var array4 = [5,4,2,6,1,7,8,3,9,10]
 
+print(array4.sorted(by: {(a:Int, b)-> Bool in
+    return a < b}))
 
-for i in 0..<array4.count-1 {
-    for j in i+1..<array4.count {
-        if (array4[i] > array4[j]) {
-            let temp = array4[i]
-            array4[i] = array4[j]
-            array4[j] = temp
-        }
-    }
-}
 
-print (array4)
 // 5. 주어진 배열에서 각각의 수에 대해 1과 자신을 포함한 약수의 총합을 구하시오.
 
 var array5 = [2,4,6,8,10]
