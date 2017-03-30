@@ -52,3 +52,15 @@ for i in 0..<array5.count {
 }
 
 print (sum)
+
+// 1 1,2 1,2 1,2
+
+//2
+
+//2, 4, 6, 8, 10
+
+//1,2,3,4,5
+
+
+
+print(array5.reduce(0, +) + ((array5.map{$0/2}).reduce(0,+)) + (((array5.map{$0/2}).filter{$0%2==0}).reduce(0,+)) + (((array5.filter{$0%3==0}).map{$0/3}).reduce(0,+)) + (((array5.filter{$0%5==0}).map{$0/5}).reduce(0,+)))
